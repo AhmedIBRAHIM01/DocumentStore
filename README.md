@@ -28,21 +28,32 @@ Startanleitung
    3: Nach Dokumenten anhand des Titels suchen
    4: Beenden
  Beispiel-Session
+
    Client 1:
+   
    1: to create a new Document.
+   
    Title: learn how to live
+   
    Authors: Ahmed, Omar
+   
    Content: hello I am the new author
+   
    → Dokument wird mit ID 1 erstellt
+   
 
 Client 2:
+
 2: to retrieve Document by ID
 Enter ID: 1
+
 → Dokumentdetails werden korrekt angezeigt
+
 Hinweise
 - Die Dokumente sind nur während der Laufzeit im Speicher.
 - Es können beliebig viele Clients gleichzeitig verwendet werden.
 - Die Verbindung erfolgt über RMI-Registry auf Port 1099.
+
 Voraussetzungen
 - Java JDK 8 oder höher
 - RMI aktiviert (kein spezieller Framework erforderlich)
