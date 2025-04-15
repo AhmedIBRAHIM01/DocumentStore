@@ -1,14 +1,12 @@
 package org.example;
 
-import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class DocumentStorClient {
+public class DocumentStoreClient2 {
     public static void main(String[] args) {
         try {
             Registry registry= LocateRegistry.getRegistry("Localhost", 1099);
@@ -24,7 +22,7 @@ public class DocumentStorClient {
                 System.out.print("Choice: ");
                 String choice= scanner.nextLine();
 
-                switch (choice){
+                switch (choice.trim()){
                     case "1":
                         System.out.print("Title:");
                         String title= scanner.nextLine();
@@ -37,7 +35,7 @@ public class DocumentStorClient {
                         break;
                     case "2":
                         System.out.print("Enter the ID:....");
-                        int DId= scanner.nextInt();
+                        int DId= Integer.parseInt(scanner.nextLine());
                         Document document= documentStore.getDocumentById(DId);
                         if(document!=null){
                             System.out.println(document);
